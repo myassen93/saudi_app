@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django_otp.plugins.otp_static',
     'rosetta',
     'crispy_forms',
+    'corsheaders',
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',
@@ -42,6 +43,7 @@ FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +53,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# CORS is a browser-only mechanism, for the React web app. Native mobile apps
+# (React Native, iOS, Android) aren't subject to it and need no extra config —
+# they authenticate the same way as any API client, with the token from
+# /api/auth/login/ in an Authorization header. See local.py / production.py
+# for the actual allowed origins (dev defaults vs. env-driven in prod).
+CORS_ALLOW_CREDENTIALS = True
 
 AUTH_USER_MODEL = 'accounts.User'
 

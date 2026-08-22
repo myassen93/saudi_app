@@ -5,9 +5,27 @@ Use with: DJANGO_SETTINGS_MODULE=saudi_dashboard.settings.production, set
 explicitly in the deployment environment (e.g. the gunicorn/uwsgi service,
 or wsgi.py's env if that's how this is deployed).
 
+Deployed at https://saudidashboard.pythonanywhere.com by default (see
+DJANGO_ALLOWED_HOSTS / DJANGO_CSRF_TRUSTED_ORIGINS below to point elsewhere).
+
 Required environment variables:
     DJANGO_SECRET_KEY        - secret key, no default (fails fast if unset)
-    DJANGO_ALLOWED_HOSTS     - comma-separated list of allowed hostnames
+
+Optional environment variables:
+    DJANGO_ALLOWED_HOSTS         - comma-separated hostnames
+                                   (default: saudidashboard.pythonanywhere.com)
+    DJANGO_CSRF_TRUSTED_ORIGINS  - comma-separated scheme+host origins for the
+                                   Django-rendered pages (dashboard/admin)
+                                   (default: https://saudidashboard.pythonanywhere.com)
+    DJANGO_CORS_ALLOWED_ORIGINS  - comma-separated origins allowed to call the
+                                   REST API from a browser (the React web app).
+                                   Not needed for the mobile app — CORS is a
+                                   browser-only mechanism; native/mobile
+                                   clients just call the API with the token
+                                   from /api/auth/login/ in an Authorization
+                                   header, same as any other API client.
+                                   Empty by default: set this once the
+                                   deployed frontend's URL is known.
 
 Optional environment variables (database, defaults to sqlite):
     DJANGO_DB_ENGINE, DJANGO_DB_NAME, DJANGO_DB_USER, DJANGO_DB_PASSWORD,
@@ -27,8 +45,29 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     host.strip()
-    for host in os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')
+    for host in os.environ.get(
+        'DJANGO_ALLOWED_HOSTS', 'saudidashboard.pythonanywhere.com'
+    ).split(',')
     if host.strip()
+]
+
+# Needed because PythonAnywhere terminates HTTPS at its own reverse proxy —
+# Django's CSRF Origin check needs an explicit scheme+host match for the
+# dashboard/admin login forms to work.
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get(
+        'DJANGO_CSRF_TRUSTED_ORIGINS', 'https://saudidashboard.pythonanywhere.com'
+    ).split(',')
+    if origin.strip()
+]
+
+# The React web app's deployed origin(s). Left empty until it's known — set
+# DJANGO_CORS_ALLOWED_ORIGINS before the frontend needs to call this API.
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get('DJANGO_CORS_ALLOWED_ORIGINS', '').split(',')
+    if origin.strip()
 ]
 
 DATABASES = {
