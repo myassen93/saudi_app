@@ -1,0 +1,14 @@
+{% extends "dashboard/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "حذف مستخدم" %}{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 420px; margin: 2rem auto; text-align:center;">
+    <h1 style="font-size:1.3rem;">{% blocktranslate with username=object.username %}حذف المستخدم &quot;{{ username }}&quot;؟{% endblocktranslate %}</h1>
+    <p>{% trans "لا يمكن التراجع عن هذا الإجراء." %}</p>
+    <form method="post" style="display:flex; gap:0.75rem; justify-content:center; margin-top:1.5rem;">
+        {% csrf_token %}
+        <button type="submit" class="crispy-submit" style="background-color:#c0392b; width:auto; padding:0.6rem 1.4rem;">{% trans "حذف" %}</button>
+        <a href="{% url 'dashboard' %}" style="align-self:center; color:var(--saudi-green); text-decoration:none; font-weight:600;">{% trans "إلغاء" %}</a>
+    </form>
+</div>
+{% endblock %}

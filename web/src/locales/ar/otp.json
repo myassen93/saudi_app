@@ -1,0 +1,32 @@
+{
+  "login": {
+    "title": "التحقق بخطوتين",
+    "subtitle": "أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة",
+    "codeLabel": "رمز التحقق",
+    "verify": "تحقق",
+    "verifying": "جارٍ التحقق…",
+    "useDifferentAccount": "استخدام حساب آخر"
+  },
+  "settings": {
+    "title": "التحقق بخطوتين",
+    "description": "أضف طبقة حماية إضافية لحسابك باستخدام تطبيق مصادقة.",
+    "statusEnabled": "مفعّل",
+    "statusDisabled": "غير مفعّل",
+    "enableButton": "تفعيل التحقق بخطوتين",
+    "disableButton": "إيقاف",
+    "scanTitle": "امسح رمز QR",
+    "scanInstructions": "امسح الرمز باستخدام Google Authenticator أو Authy أو تطبيق مشابه، ثم أدخل الرمز المكوّن من 6 أرقام أدناه للتأكيد.",
+    "manualEntryLabel": "أو أدخل هذا الرمز يدويًا",
+    "codeLabel": "رمز التحقق",
+    "confirmButton": "تأكيد",
+    "confirming": "جارٍ التأكيد…",
+    "cancelButton": "إلغاء",
+    "enableSuccessTitle": "تم تفعيل التحقق بخطوتين",
+    "enableSuccessMessage": "أصبح حسابك محميًا بخطوة تحقق إضافية عند تسجيل الدخول.",
+    "disableConfirmTitle": "إيقاف التحقق بخطوتين؟",
+    "disableConfirmMessage": "لن تحتاج بعد الآن سوى كلمة المرور لتسجيل الدخول.",
+    "disableSuccessTitle": "تم إيقاف التحقق بخطوتين",
+    "disableSuccessMessage": "لم يعد حسابك بحاجة إلى رمز تحقق عند تسجيل الدخول.",
+    "errorTitle": "حدث خطأ ما"
+  }
+}

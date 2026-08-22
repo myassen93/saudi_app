@@ -1,0 +1,91 @@
+.security-panel {
+  margin-top: 2.5rem;
+  text-align: start;
+  background: var(--saudi-white);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 108, 53, 0.08);
+}
+
+.security-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--saudi-green-dark);
+  margin: 0 0 0.4rem;
+}
+
+.security-status {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.security-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.security-badge-on {
+  background: rgba(0, 108, 53, 0.12);
+  color: var(--saudi-green-dark);
+}
+
+.security-badge-off {
+  background: rgba(26, 26, 26, 0.08);
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.security-setup {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 108, 53, 0.1);
+  max-width: 360px;
+}
+
+.security-setup-title {
+  font-weight: 700;
+  color: var(--saudi-green-dark);
+  margin: 0 0 0.3rem;
+}
+
+.security-qr {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 108, 53, 0.15);
+  margin: 0.75rem 0;
+}
+
+.security-manual-label {
+  font-size: 0.85rem;
+  color: rgba(26, 26, 26, 0.65);
+  margin: 0.5rem 0 0.3rem;
+}
+
+.security-secret {
+  display: inline-block;
+  background: var(--saudi-green-light);
+  color: var(--saudi-green-dark);
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.security-code-input {
+  letter-spacing: 0.3em;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.security-setup-actions {
+  align-items: center;
+  gap: 0.75rem;
+}

@@ -1,0 +1,116 @@
+{
+  "appTitle": "لوحة تحكم السعودية",
+  "loading": "جارِ التحميل...",
+  "common": {
+    "ok": "حسناً",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "refresh": "تحديث",
+    "error": "خطأ",
+    "close": "إغلاق"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "users": "المستخدمون",
+    "login": "تسجيل الدخول"
+  },
+  "language": {
+    "label": "اللغة",
+    "ar": "العربية",
+    "en": "English"
+  },
+  "stats": {
+    "total": "إجمالي المستخدمين",
+    "male": "ذكور",
+    "female": "إناث"
+  },
+  "actions": {
+    "addUser": "إضافة مستخدم",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "logout": "تسجيل الخروج",
+    "refresh": "تحديث",
+    "ok": "حسناً"
+  },
+  "auth": {
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "signingIn": "جارِ تسجيل الدخول...",
+    "welcome": "مرحباً، {{username}}",
+    "cardSubtitle": "سجّل الدخول للوصول إلى لوحة التحكم",
+    "showcase": {
+      "description": "منصّة موحّدة لإدارة المستخدمين ومتابعة الإحصاءات بأمان.",
+      "point1": "إدارة كاملة للمستخدمين والصلاحيات",
+      "point2": "حماية إضافية بخطوتين للتحقق",
+      "point3": "دعم كامل للغتين العربية والإنجليزية"
+    },
+    "errors": {
+      "invalid_credentials": "اسم المستخدم أو كلمة المرور غير صحيحة",
+      "network_error": "تعذّر الاتصال بالخادم، تحقّق من الشبكة",
+      "server_error": "حدث خطأ في الخادم، حاول لاحقاً",
+      "invalid_otp": "رمز التحقق غير صحيح"
+    }
+  },
+  "otp": {
+    "login": {
+      "title": "التحقق بخطوتين",
+      "subtitle": "أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة",
+      "codeLabel": "رمز التحقق",
+      "verify": "تحقق",
+      "verifying": "جارِ التحقق...",
+      "useDifferentAccount": "استخدام حساب آخر"
+    },
+    "settings": {
+      "title": "التحقق بخطوتين",
+      "description": "أضف طبقة حماية إضافية لحسابك باستخدام تطبيق مصادقة.",
+      "statusEnabled": "مُفعّل",
+      "statusDisabled": "غير مُفعّل",
+      "enableButton": "تفعيل",
+      "disableButton": "تعطيل",
+      "scanTitle": "امسح رمز QR",
+      "scanInstructions": "استخدم تطبيق المصادقة (مثل Google Authenticator) لمسح الرمز، أو أدخل المفتاح يدوياً.",
+      "manualEntryLabel": "الإدخال اليدوي",
+      "codeLabel": "رمز التحقق",
+      "confirmButton": "تأكيد",
+      "confirming": "جارِ التأكيد...",
+      "cancelButton": "إلغاء",
+      "enableSuccessTitle": "تم التفعيل",
+      "enableSuccessMessage": "تم تفعيل التحقق بخطوتين بنجاح",
+      "disableConfirmTitle": "تعطيل التحقق بخطوتين",
+      "disableConfirmMessage": "هل أنت متأكد من رغبتك في تعطيل التحقق بخطوتين؟",
+      "disableSuccessTitle": "تم التعطيل",
+      "disableSuccessMessage": "تم تعطيل التحقق بخطوتين",
+      "errorTitle": "حدث خطأ"
+    }
+  },
+  "users": {
+    "title": "المستخدمون",
+    "username": "اسم المستخدم",
+    "gender": "الجنس",
+    "staff": "مسؤول",
+    "active": "نشط",
+    "joined": "تاريخ الانضمام",
+    "male": "ذكر",
+    "female": "أنثى",
+    "notSet": "—",
+    "empty": "لا يوجد مستخدمون بعد",
+    "newUsername": "اسم مستخدم جديد",
+    "newPassword": "كلمة مرور جديدة",
+    "selectGender": "اختر الجنس",
+    "passwordHint": "اتركه فارغاً للاحتفاظ بكلمة المرور الحالية",
+    "createSuccessTitle": "تم الإنشاء",
+    "createSuccessMessage": "تم إنشاء المستخدم {{username}} بنجاح",
+    "updateSuccessTitle": "تم التحديث",
+    "updateSuccessMessage": "تم تحديث المستخدم {{username}} بنجاح",
+    "deleteSuccessTitle": "تم الحذف",
+    "deleteSuccessMessage": "تم حذف المستخدم {{username}} بنجاح",
+    "errorTitle": "حدث خطأ",
+    "confirmDeleteTitle": "حذف المستخدم",
+    "confirmDeleteMessage": "هل أنت متأكد من حذف المستخدم {{username}}؟ لا يمكن التراجع عن هذا الإجراء."
+  }
+}

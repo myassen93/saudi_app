@@ -1,0 +1,75 @@
+{
+  "appTitle": "لوحة تحكم السعودية",
+  "loading": "جارٍ التحميل…",
+  "tagline": "لوحة تحكم صغيرة لإدارة المستخدمين وعرض الإحصائيات.",
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "users": "المستخدمون",
+    "login": "تسجيل الدخول"
+  },
+  "language": {
+    "label": "اللغة",
+    "ar": "العربية",
+    "en": "English"
+  },
+  "stats": {
+    "total": "إجمالي المستخدمين",
+    "male": "ذكور",
+    "female": "إناث"
+  },
+  "actions": {
+    "addUser": "إضافة مستخدم",
+    "edit": "تعديل",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "logout": "تسجيل الخروج",
+    "refresh": "تحديث",
+    "ok": "موافق"
+  },
+  "auth": {
+    "username": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "signingIn": "جارٍ تسجيل الدخول…",
+    "welcome": "مسجل الدخول باسم {{username}}",
+    "cardSubtitle": "أدخل بياناتك للوصول إلى لوحة التحكم",
+    "showcase": {
+      "description": "نظام تحكم بسيط وآمن لإدارة المستخدمين ومتابعة إحصائيات لوحة المعلومات.",
+      "point1": "إدارة كاملة للمستخدمين",
+      "point2": "حماية إضافية بالتحقق بخطوتين",
+      "point3": "إحصائيات فورية للوحة المعلومات"
+    },
+    "errors": {
+      "invalid_credentials": "اسم المستخدم أو كلمة المرور غير صحيحة.",
+      "network_error": "تعذّر الوصول إلى الخادم. تأكد من تشغيل الواجهة الخلفية.",
+      "server_error": "حدث خطأ في الخادم. يرجى المحاولة مرة أخرى.",
+      "invalid_otp": "رمز التحقق غير صحيح."
+    }
+  },
+  "users": {
+    "title": "المستخدمون",
+    "username": "اسم المستخدم",
+    "gender": "الجنس",
+    "staff": "مسؤول",
+    "active": "مفعّل",
+    "joined": "تاريخ الانضمام",
+    "male": "ذكر",
+    "female": "أنثى",
+    "notSet": "—",
+    "empty": "لا يوجد مستخدمون بعد.",
+    "newUsername": "اسم مستخدم جديد",
+    "newPassword": "كلمة المرور",
+    "selectGender": "اختر الجنس",
+    "passwordHint": "كلمة مرور جديدة (اتركها فارغة للاحتفاظ بالحالية)",
+    "createSuccessTitle": "تم إنشاء المستخدم",
+    "createSuccessMessage": "تم إنشاء \"{{username}}\" بنجاح.",
+    "updateSuccessTitle": "تم تحديث المستخدم",
+    "updateSuccessMessage": "تم تحديث \"{{username}}\" بنجاح.",
+    "deleteSuccessTitle": "تم حذف المستخدم",
+    "deleteSuccessMessage": "تم حذف \"{{username}}\".",
+    "errorTitle": "حدث خطأ ما",
+    "confirmDeleteTitle": "حذف مستخدم",
+    "confirmDeleteMessage": "هل أنت متأكد من حذف \"{{username}}\"؟ لا يمكن التراجع عن هذا الإجراء."
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "appTitle": "Saudi Dashboard",
+  "loading": "Loading...",
+  "common": {
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "refresh": "Refresh",
+    "error": "Error",
+    "close": "Close"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "login": "Login"
+  },
+  "language": {
+    "label": "Language",
+    "ar": "العربية",
+    "en": "English"
+  },
+  "stats": {
+    "total": "Total users",
+    "male": "Male",
+    "female": "Female"
+  },
+  "actions": {
+    "addUser": "Add user",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "logout": "Log out",
+    "refresh": "Refresh",
+    "ok": "OK"
+  },
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in...",
+    "welcome": "Welcome, {{username}}",
+    "cardSubtitle": "Sign in to access the dashboard",
+    "showcase": {
+      "description": "One unified platform to manage users and track statistics securely.",
+      "point1": "Full user and permissions management",
+      "point2": "Extra protection with two-factor authentication",
+      "point3": "Full Arabic and English language support"
+    },
+    "errors": {
+      "invalid_credentials": "Incorrect username or password",
+      "network_error": "Could not reach the server, check your connection",
+      "server_error": "A server error occurred, try again later",
+      "invalid_otp": "Invalid verification code"
+    }
+  },
+  "otp": {
+    "login": {
+      "title": "Two-Factor Verification",
+      "subtitle": "Enter the 6-digit code from your authenticator app",
+      "codeLabel": "Verification code",
+      "verify": "Verify",
+      "verifying": "Verifying...",
+      "useDifferentAccount": "Use a different account"
+    },
+    "settings": {
+      "title": "Two-Factor Authentication",
+      "description": "Add an extra layer of protection to your account using an authenticator app.",
+      "statusEnabled": "Enabled",
+      "statusDisabled": "Disabled",
+      "enableButton": "Enable",
+      "disableButton": "Disable",
+      "scanTitle": "Scan the QR code",
+      "scanInstructions": "Use an authenticator app (like Google Authenticator) to scan the code, or enter the key manually.",
+      "manualEntryLabel": "Manual entry",
+      "codeLabel": "Verification code",
+      "confirmButton": "Confirm",
+      "confirming": "Confirming...",
+      "cancelButton": "Cancel",
+      "enableSuccessTitle": "Enabled",
+      "enableSuccessMessage": "Two-factor authentication was enabled successfully",
+      "disableConfirmTitle": "Disable Two-Factor Authentication",
+      "disableConfirmMessage": "Are you sure you want to disable two-factor authentication?",
+      "disableSuccessTitle": "Disabled",
+      "disableSuccessMessage": "Two-factor authentication was disabled",
+      "errorTitle": "Something went wrong"
+    }
+  },
+  "users": {
+    "title": "Users",
+    "username": "Username",
+    "gender": "Gender",
+    "staff": "Staff",
+    "active": "Active",
+    "joined": "Joined",
+    "male": "Male",
+    "female": "Female",
+    "notSet": "—",
+    "empty": "No users yet",
+    "newUsername": "New username",
+    "newPassword": "New password",
+    "selectGender": "Select gender",
+    "passwordHint": "Leave blank to keep the current password",
+    "createSuccessTitle": "Created",
+    "createSuccessMessage": "User {{username}} was created successfully",
+    "updateSuccessTitle": "Updated",
+    "updateSuccessMessage": "User {{username}} was updated successfully",
+    "deleteSuccessTitle": "Deleted",
+    "deleteSuccessMessage": "User {{username}} was deleted successfully",
+    "errorTitle": "Something went wrong",
+    "confirmDeleteTitle": "Delete user",
+    "confirmDeleteMessage": "Are you sure you want to delete {{username}}? This can't be undone."
+  }
+}

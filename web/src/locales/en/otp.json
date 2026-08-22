@@ -1,0 +1,32 @@
+{
+  "login": {
+    "title": "Two-step verification",
+    "subtitle": "Enter the 6-digit code from your authenticator app",
+    "codeLabel": "Verification code",
+    "verify": "Verify",
+    "verifying": "Verifying…",
+    "useDifferentAccount": "Use a different account"
+  },
+  "settings": {
+    "title": "Two-step verification",
+    "description": "Add an extra layer of security to your account with an authenticator app.",
+    "statusEnabled": "Enabled",
+    "statusDisabled": "Disabled",
+    "enableButton": "Enable two-step verification",
+    "disableButton": "Disable",
+    "scanTitle": "Scan this QR code",
+    "scanInstructions": "Scan with Google Authenticator, Authy, or a similar app, then enter the 6-digit code below to confirm.",
+    "manualEntryLabel": "Or enter this code manually",
+    "codeLabel": "Verification code",
+    "confirmButton": "Confirm",
+    "confirming": "Confirming…",
+    "cancelButton": "Cancel",
+    "enableSuccessTitle": "Two-step verification enabled",
+    "enableSuccessMessage": "Your account is now protected with an extra verification step at sign-in.",
+    "disableConfirmTitle": "Disable two-step verification?",
+    "disableConfirmMessage": "You will only need your password to sign in from now on.",
+    "disableSuccessTitle": "Two-step verification disabled",
+    "disableSuccessMessage": "Your account no longer requires a verification code at sign-in.",
+    "errorTitle": "Something went wrong"
+  }
+}

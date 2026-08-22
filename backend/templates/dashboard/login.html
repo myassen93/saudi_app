@@ -1,0 +1,35 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags i18n static %}
+{% block title %}{% trans "تسجيل الدخول" %}{% endblock %}
+{% block body_class %}login-page{% endblock %}
+{% block content %}
+<div class="login-lang-switch">
+    <form action="{% url 'set_language' %}" method="post" class="lang-switch">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.get_full_path }}">
+        <button type="submit" name="language" value="ar" class="{% if CURRENT_LANGUAGE == 'ar' %}is-active{% endif %}">ع</button>
+        <button type="submit" name="language" value="en" class="{% if CURRENT_LANGUAGE == 'en' %}is-active{% endif %}">EN</button>
+    </form>
+</div>
+<section class="login-showcase">
+    <div class="login-showcase-badge">
+        <img src="{% static 'img/logo.svg' %}" alt="">
+    </div>
+    <h1>{% trans "لوحة تحكم السعودية" %}</h1>
+    <p>{% trans "نظام تحكم بسيط وآمن لإدارة المستخدمين ومتابعة إحصائيات لوحة المعلومات." %}</p>
+    <ul class="login-showcase-points">
+        <li>{% trans "إدارة كاملة للمستخدمين" %}</li>
+        <li>{% trans "حماية إضافية بالتحقق بخطوتين" %}</li>
+        <li>{% trans "إحصائيات فورية للوحة المعلومات" %}</li>
+    </ul>
+</section>
+<section class="login-panel">
+    <div class="login-card">
+        <div class="login-card-header">
+            <h2>{% trans "تسجيل الدخول" %}</h2>
+            <p>{% trans "أدخل بياناتك للوصول إلى لوحة التحكم" %}</p>
+        </div>
+        {% crispy form %}
+    </div>
+</section>
+{% endblock %}

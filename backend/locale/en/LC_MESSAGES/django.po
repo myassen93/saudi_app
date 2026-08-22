@@ -1,0 +1,339 @@
+# English translations for the Saudi Dashboard project.
+# Source strings are Arabic (LANGUAGE_CODE = 'ar'); this file provides the
+# English msgstr for each one.
+msgid ""
+msgstr ""
+"Project-Id-Version: saudi-dashboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-21 22:03+0300\n"
+"PO-Revision-Date: 2026-08-21 22:03+0300\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: accounts/admin.py:11 accounts/admin.py:14
+msgid "معلومات إضافية"
+msgstr "Additional information"
+
+#: accounts/forms.py:11
+msgid "كلمة المرور"
+msgstr "Password"
+
+#: accounts/forms.py:16 accounts/forms.py:41
+msgid "اسم المستخدم"
+msgstr "Username"
+
+#: accounts/forms.py:16 accounts/forms.py:41 accounts/models.py:12
+#: templates/dashboard/dashboard.html:77
+msgid "الجنس"
+msgstr "Gender"
+
+#: accounts/forms.py:22
+msgid "إضافة"
+msgstr "Add"
+
+#: accounts/forms.py:41 templates/dashboard/dashboard.html:95
+msgid "نشط"
+msgstr "Active"
+
+#: accounts/forms.py:47
+msgid "حفظ"
+msgstr "Save"
+
+#: accounts/forms.py:52
+msgid "رمز التحقق"
+msgstr "Verification code"
+
+#: accounts/forms.py:65
+msgid "تأكيد"
+msgstr "Confirm"
+
+#: accounts/models.py:8
+msgid "ذكر"
+msgstr "Male"
+
+#: accounts/models.py:9
+msgid "أنثى"
+msgstr "Female"
+
+#: accounts/views.py:40
+#, python-format
+msgid "تم إنشاء المستخدم %(username)s بنجاح"
+msgstr "User %(username)s created successfully"
+
+#: accounts/views.py:54
+#, python-format
+msgid "تم تعديل المستخدم %(username)s بنجاح"
+msgstr "User %(username)s updated successfully"
+
+#: accounts/views.py:67
+msgid "لا يمكنك حذف حسابك الخاص"
+msgstr "You cannot delete your own account"
+
+#: accounts/views.py:71
+#, python-format
+msgid "تم حذف المستخدم %(username)s"
+msgstr "User %(username)s deleted"
+
+#: accounts/views.py:91 accounts/views.py:97
+msgid "تحقق"
+msgstr "Verify"
+
+#: accounts/views.py:102
+msgid "تم التحقق بنجاح"
+msgstr "Verified successfully"
+
+#: accounts/views.py:104
+msgid "رمز التحقق غير صحيح"
+msgstr "Invalid verification code"
+
+#: accounts/views.py:130
+msgid "التحقق بخطوتين مُفعّل بالفعل على حسابك"
+msgstr "Two-factor authentication is already enabled on your account"
+
+#: accounts/views.py:133 accounts/views.py:141
+msgid "تفعيل"
+msgstr "Enable"
+
+#: accounts/views.py:146
+msgid "تم تفعيل التحقق بخطوتين بنجاح"
+msgstr "Two-factor authentication enabled successfully"
+
+#: accounts/views.py:148
+msgid "رمز التحقق غير صحيح، حاول مرة أخرى"
+msgstr "Invalid verification code, please try again"
+
+#: accounts/views.py:158
+msgid "تم إيقاف التحقق بخطوتين"
+msgstr "Two-factor authentication disabled"
+
+#: dashboard/forms.py:19
+msgid "دخول"
+msgstr "Log in"
+
+#: saudi_dashboard/urls.py:23 saudi_dashboard/urls.py:24
+#: templates/dashboard/base.html:855 templates/dashboard/base.html:900
+#: templates/dashboard/login.html:10
+msgid "لوحة تحكم السعودية"
+msgstr "Saudi Dashboard"
+
+#: saudi_dashboard/urls.py:25
+msgid "الإدارة"
+msgstr "Administration"
+
+#: templates/accounts/otp_setup.html:3 templates/accounts/otp_setup.html:6
+#: templates/dashboard/dashboard.html:59
+msgid "تفعيل التحقق بخطوتين"
+msgstr "Enable two-factor authentication"
+
+#: templates/accounts/otp_setup.html:8
+msgid ""
+"امسح الرمز التالي باستخدام تطبيق مصادقة (مثل Google Authenticator)، ثم أدخل "
+"الرمز المكوّن من 6 أرقام لتأكيد التفعيل."
+msgstr ""
+"Scan the code below with an authenticator app (such as Google "
+"Authenticator), then enter the 6-digit code to confirm."
+
+#: templates/accounts/otp_setup.html:11
+msgid "رمز QR"
+msgstr "QR code"
+
+#: templates/accounts/otp_setup.html:14
+msgid "أو أدخل هذا المفتاح يدويًا:"
+msgstr "Or enter this key manually:"
+
+#: templates/accounts/otp_setup.html:20 templates/accounts/user_form.html:12
+msgid "الرجوع للوحة المعلومات"
+msgstr "Back to the dashboard"
+
+#: templates/accounts/otp_verify.html:3 templates/accounts/otp_verify.html:6
+msgid "التحقق بخطوتين"
+msgstr "Two-factor authentication"
+
+#: templates/accounts/otp_verify.html:8
+msgid ""
+"أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة، أو أحد رموز النسخ الاحتياطي."
+msgstr ""
+"Enter the 6-digit code from your authenticator app, or one of your backup "
+"codes."
+
+#: templates/accounts/user_confirm_delete.html:3
+msgid "حذف مستخدم"
+msgstr "Delete user"
+
+#: templates/accounts/user_confirm_delete.html:6
+#, python-format
+msgid "حذف المستخدم &quot;%(username)s&quot;؟"
+msgstr "Delete user &quot;%(username)s&quot;?"
+
+#: templates/accounts/user_confirm_delete.html:7
+msgid "لا يمكن التراجع عن هذا الإجراء."
+msgstr "This action cannot be undone."
+
+#: templates/accounts/user_confirm_delete.html:10
+#: templates/dashboard/dashboard.html:103
+msgid "حذف"
+msgstr "Delete"
+
+#: templates/accounts/user_confirm_delete.html:11
+msgid "إلغاء"
+msgstr "Cancel"
+
+#: templates/accounts/user_form.html:3
+msgid "تعديل مستخدم"
+msgstr "Edit user"
+
+#: templates/accounts/user_form.html:3 templates/dashboard/dashboard.html:70
+msgid "إضافة مستخدم"
+msgstr "Add user"
+
+#: templates/accounts/user_form.html:7
+#, python-format
+msgid "تعديل مستخدم: %(username)s"
+msgstr "Edit user: %(username)s"
+
+#: templates/accounts/user_form.html:7
+msgid "إضافة مستخدم جديد"
+msgstr "Add a new user"
+
+#: templates/admin/base_site.html:6 templates/admin/base_site.html:186
+msgid "Django administration"
+msgstr "Django administration"
+
+#: templates/dashboard/base.html:9
+msgid "لوحة التحكم"
+msgstr "Dashboard"
+
+#: templates/dashboard/base.html:850
+msgid "جارٍ التحميل…"
+msgstr "Loading…"
+
+#: templates/dashboard/base.html:872
+msgid "مسؤول النظام"
+msgstr "Administrator"
+
+#: templates/dashboard/base.html:872
+msgid "مستخدم"
+msgstr "User"
+
+#: templates/dashboard/base.html:877
+msgid "تسجيل الخروج"
+msgstr "Log out"
+
+#: templates/dashboard/base.html:890
+msgid "إغلاق"
+msgstr "Close"
+
+#: templates/dashboard/base.html:902
+msgid "جميع الحقوق محفوظة"
+msgstr "All rights reserved"
+
+#: templates/dashboard/dashboard.html:3
+msgid "الرئيسية"
+msgstr "Home"
+
+#: templates/dashboard/dashboard.html:7
+#, python-format
+msgid "مرحباً، %(username)s"
+msgstr "Welcome, %(username)s"
+
+#: templates/dashboard/dashboard.html:8
+msgid "نظرة عامة على المستخدمين المسجلين في النظام"
+msgstr "An overview of registered users in the system"
+
+#: templates/dashboard/dashboard.html:11
+msgid "توثيق API"
+msgstr "API Docs"
+
+#: templates/dashboard/dashboard.html:22
+msgid "إجمالي عدد المستخدمين المسجلين"
+msgstr "Total registered users"
+
+#: templates/dashboard/dashboard.html:32
+#, python-format
+msgid "عدد المستخدمين (%(label)s)"
+msgstr "Number of users (%(label)s)"
+
+#: templates/dashboard/dashboard.html:43
+msgid "الأمان"
+msgstr "Security"
+
+#: templates/dashboard/dashboard.html:46
+msgid "التحقق بخطوتين مُفعّل"
+msgstr "Two-factor authentication enabled"
+
+#: templates/dashboard/dashboard.html:48
+msgid "التحقق بخطوتين غير مُفعّل"
+msgstr "Two-factor authentication disabled"
+
+#: templates/dashboard/dashboard.html:52
+msgid "حسابك محمي برمز تحقق إضافي عند تسجيل الدخول."
+msgstr "Your account is protected by an extra verification code at sign-in."
+
+#: templates/dashboard/dashboard.html:53
+msgid "هل أنت متأكد من إيقاف التحقق بخطوتين؟"
+msgstr "Are you sure you want to disable two-factor authentication?"
+
+#: templates/dashboard/dashboard.html:55
+msgid "إيقاف التحقق بخطوتين"
+msgstr "Disable two-factor authentication"
+
+#: templates/dashboard/dashboard.html:58
+msgid "أضِف طبقة حماية إضافية لحسابك عبر تطبيق مصادقة."
+msgstr "Add an extra layer of protection to your account with an authenticator app."
+
+#: templates/dashboard/dashboard.html:68
+msgid "إدارة المستخدمين"
+msgstr "User Management"
+
+#: templates/dashboard/dashboard.html:76
+msgid "المستخدم"
+msgstr "User"
+
+#: templates/dashboard/dashboard.html:78
+msgid "الحالة"
+msgstr "Status"
+
+#: templates/dashboard/dashboard.html:79
+msgid "تاريخ الانضمام"
+msgstr "Date Joined"
+
+#: templates/dashboard/dashboard.html:80
+msgid "إجراءات"
+msgstr "Actions"
+
+#: templates/dashboard/dashboard.html:97
+msgid "موقوف"
+msgstr "Inactive"
+
+#: templates/dashboard/dashboard.html:102
+msgid "تعديل"
+msgstr "Edit"
+
+#: templates/dashboard/login.html:3 templates/dashboard/login.html:21
+msgid "تسجيل الدخول"
+msgstr "Sign In"
+
+#: templates/dashboard/login.html:11
+msgid "نظام تحكم بسيط وآمن لإدارة المستخدمين ومتابعة إحصائيات لوحة المعلومات."
+msgstr "A simple, secure control panel for managing users and tracking dashboard statistics."
+
+#: templates/dashboard/login.html:13
+msgid "إدارة كاملة للمستخدمين"
+msgstr "Full user management"
+
+#: templates/dashboard/login.html:14
+msgid "حماية إضافية بالتحقق بخطوتين"
+msgstr "Extra protection with two-factor authentication"
+
+#: templates/dashboard/login.html:15
+msgid "إحصائيات فورية للوحة المعلومات"
+msgstr "Real-time dashboard statistics"
+
+#: templates/dashboard/login.html:22
+msgid "أدخل بياناتك للوصول إلى لوحة التحكم"
+msgstr "Enter your details to access the dashboard"

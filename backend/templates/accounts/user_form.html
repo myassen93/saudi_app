@@ -1,0 +1,16 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags i18n %}
+{% block title %}{% if form.instance.pk %}{% trans "تعديل مستخدم" %}{% else %}{% trans "إضافة مستخدم" %}{% endif %}{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 480px; margin: 2rem auto;">
+    <h1 style="text-align:center; font-size:1.4rem;">
+        {% if form.instance.pk %}{% blocktranslate with username=form.instance.username %}تعديل مستخدم: {{ username }}{% endblocktranslate %}{% else %}{% trans "إضافة مستخدم جديد" %}{% endif %}
+    </h1>
+    {% crispy form %}
+    <p style="text-align:center; margin-top:1rem;">
+        <a href="{% url 'dashboard' %}" style="color:var(--saudi-green); text-decoration:none; font-weight:600;">
+            &laquo; {% trans "الرجوع للوحة المعلومات" %}
+        </a>
+    </p>
+</div>
+{% endblock %}

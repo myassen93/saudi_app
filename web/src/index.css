@@ -1,0 +1,35 @@
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-sans/700.css";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+:root {
+  --saudi-green: #006c35;
+  --saudi-green-dark: #004d26;
+  --saudi-green-light: #e6f2ec;
+  --saudi-white: #ffffff;
+  --saudi-text: #1a1a1a;
+
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif;
+  background-color: var(--saudi-green-light);
+  color: var(--saudi-text);
+}

@@ -1,0 +1,75 @@
+{
+  "appTitle": "Saudi Dashboard",
+  "loading": "Loading…",
+  "tagline": "A small control panel for managing users and viewing stats.",
+  "nav": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "login": "Login"
+  },
+  "language": {
+    "label": "Language",
+    "ar": "العربية",
+    "en": "English"
+  },
+  "stats": {
+    "total": "Total users",
+    "male": "Male",
+    "female": "Female"
+  },
+  "actions": {
+    "addUser": "Add user",
+    "edit": "Edit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "logout": "Log out",
+    "refresh": "Refresh",
+    "ok": "OK"
+  },
+  "auth": {
+    "username": "Username",
+    "password": "Password",
+    "signIn": "Sign in",
+    "signingIn": "Signing in…",
+    "welcome": "Signed in as {{username}}",
+    "cardSubtitle": "Enter your credentials to access the dashboard",
+    "showcase": {
+      "description": "A simple, secure control system for managing users and tracking dashboard statistics.",
+      "point1": "Full user management",
+      "point2": "Extra protection with two-step verification",
+      "point3": "Real-time dashboard statistics"
+    },
+    "errors": {
+      "invalid_credentials": "Invalid username or password.",
+      "network_error": "Can't reach the server. Is the backend running?",
+      "server_error": "Something went wrong on the server. Please try again.",
+      "invalid_otp": "The verification code is incorrect."
+    }
+  },
+  "users": {
+    "title": "Users",
+    "username": "Username",
+    "gender": "Gender",
+    "staff": "Staff",
+    "active": "Active",
+    "joined": "Joined",
+    "male": "Male",
+    "female": "Female",
+    "notSet": "—",
+    "empty": "No users yet.",
+    "newUsername": "New username",
+    "newPassword": "Password",
+    "selectGender": "Select gender",
+    "passwordHint": "New password (leave blank to keep)",
+    "createSuccessTitle": "User created",
+    "createSuccessMessage": "\"{{username}}\" was created successfully.",
+    "updateSuccessTitle": "User updated",
+    "updateSuccessMessage": "\"{{username}}\" was updated successfully.",
+    "deleteSuccessTitle": "User deleted",
+    "deleteSuccessMessage": "\"{{username}}\" was deleted.",
+    "errorTitle": "Something went wrong",
+    "confirmDeleteTitle": "Delete user",
+    "confirmDeleteMessage": "Are you sure you want to delete \"{{username}}\"? This can't be undone."
+  }
+}

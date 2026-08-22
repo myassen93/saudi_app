@@ -1,0 +1,9 @@
+<input type="{{ input.input_type }}"
+    name="{{ input.name }}"
+    value="{{ input.value }}"
+    {% if input.input_type != "hidden" %}
+        class="crispy-submit {{ input.field_classes }}"
+        id="{% if input.id %}{{ input.id }}{% else %}{{ input.input_type }}-id-{{ input.name|slugify }}{% endif %}"
+    {% endif %}
+    {{ input.flat_attrs }}
+/>

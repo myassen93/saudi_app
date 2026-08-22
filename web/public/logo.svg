@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="لوحة تحكم السعودية">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#006C35"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1.5"/>
+  <g fill="#ffffff">
+    <rect x="15" y="34" width="8" height="16" rx="2"/>
+    <rect x="28" y="24" width="8" height="26" rx="2"/>
+    <rect x="41" y="16" width="8" height="34" rx="2"/>
+  </g>
+  <circle cx="45" cy="14" r="4" fill="#f2c94c"/>
+</svg>

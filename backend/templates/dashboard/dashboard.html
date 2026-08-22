@@ -1,0 +1,113 @@
+{% extends "dashboard/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "الرئيسية" %}{% endblock %}
+{% block content %}
+<div class="page-header">
+    <div>
+        <h1>{% blocktranslate with username=user.username %}مرحباً، {{ username }}{% endblocktranslate %}</h1>
+        <p class="page-subtitle">{% trans "نظرة عامة على المستخدمين المسجلين في النظام" %}</p>
+    </div>
+    {% if is_admin %}
+    <a href="{% url 'swagger-ui' %}" target="_blank" rel="noopener" class="btn-link">{% trans "توثيق API" %}</a>
+    {% endif %}
+</div>
+
+<div class="kpi-grid">
+    <div class="kpi-card">
+        <div class="kpi-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <div>
+            <div class="kpi-value">{{ total_users }}</div>
+            <div class="kpi-label">{% trans "إجمالي عدد المستخدمين المسجلين" %}</div>
+        </div>
+    </div>
+    {% for item in gender_counts %}
+    <div class="kpi-card">
+        <div class="kpi-icon {% if item.gender == 'male' %}kpi-blue{% elif item.gender == 'female' %}kpi-pink{% endif %}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div>
+            <div class="kpi-value">{{ item.count }}</div>
+            <div class="kpi-label">{% blocktranslate with label=item.label %}عدد المستخدمين ({{ label }}){% endblocktranslate %}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="dashboard-sections">
+    <div class="card">
+        <div class="section-header">
+            <h2>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                {% trans "الأمان" %}
+            </h2>
+            {% if otp_enabled %}
+            <span class="badge badge-active">{% trans "التحقق بخطوتين مُفعّل" %}</span>
+            {% else %}
+            <span class="badge badge-inactive">{% trans "التحقق بخطوتين غير مُفعّل" %}</span>
+            {% endif %}
+        </div>
+        {% if otp_enabled %}
+        <p style="color:#6b7c74;">{% trans "حسابك محمي برمز تحقق إضافي عند تسجيل الدخول." %}</p>
+        <form action="{% url 'otp-disable' %}" method="post" onsubmit="return confirm('{% trans 'هل أنت متأكد من إيقاف التحقق بخطوتين؟' %}');">
+            {% csrf_token %}
+            <button type="submit" class="btn-link" style="background-color:#c0392b; border:none; cursor:pointer;">{% trans "إيقاف التحقق بخطوتين" %}</button>
+        </form>
+        {% else %}
+        <p style="color:#6b7c74;">{% trans "أضِف طبقة حماية إضافية لحسابك عبر تطبيق مصادقة." %}</p>
+        <a href="{% url 'otp-setup' %}" class="btn-link">{% trans "تفعيل التحقق بخطوتين" %}</a>
+        {% endif %}
+    </div>
+
+    {% if is_admin %}
+    <div class="card">
+        <div class="section-header">
+            <h2>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" y1="8" x2="19" y2="14"></line><line x1="22" y1="11" x2="16" y2="11"></line></svg>
+                {% trans "إدارة المستخدمين" %}
+            </h2>
+            <a href="{% url 'user-add' %}" class="btn-link">+ {% trans "إضافة مستخدم" %}</a>
+        </div>
+        <div class="table-wrap">
+            <table class="users-table">
+                <thead>
+                    <tr>
+                        <th>{% trans "المستخدم" %}</th>
+                        <th>{% trans "الجنس" %}</th>
+                        <th>{% trans "الحالة" %}</th>
+                        <th>{% trans "تاريخ الانضمام" %}</th>
+                        <th>{% trans "إجراءات" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in users %}
+                    <tr>
+                        <td>
+                            <div class="table-user">
+                                <span class="table-avatar">{{ u.username|slice:":1"|upper }}</span>
+                                <span>{{ u.username }}</span>
+                            </div>
+                        </td>
+                        <td>{{ u.get_gender_display|default:"—" }}</td>
+                        <td>
+                            {% if u.is_active %}
+                            <span class="badge badge-active">{% trans "نشط" %}</span>
+                            {% else %}
+                            <span class="badge badge-inactive">{% trans "موقوف" %}</span>
+                            {% endif %}
+                        </td>
+                        <td>{{ u.date_joined|date:"Y-m-d" }}</td>
+                        <td class="table-actions">
+                            <a href="{% url 'user-edit' u.pk %}">{% trans "تعديل" %}</a>
+                            <a href="{% url 'user-delete' u.pk %}" class="danger-link">{% trans "حذف" %}</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

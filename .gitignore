@@ -1,0 +1,9 @@
+# Each of mobile/, web/, backend/ has its own .gitignore for its own build
+# artifacts (node_modules, .venv, dist, etc.) — this one is just for
+# repo-wide / OS / editor noise.
+
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

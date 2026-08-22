@@ -1,0 +1,12 @@
+{% extends "dashboard/base.html" %}
+{% load crispy_forms_tags i18n %}
+{% block title %}{% trans "التحقق بخطوتين" %}{% endblock %}
+{% block content %}
+<div class="card" style="max-width: 380px; margin: 3rem auto;">
+    <h1 style="text-align:center; font-size:1.4rem;">{% trans "التحقق بخطوتين" %}</h1>
+    <p style="text-align:center; color:#6b7c74; margin-top:-0.5rem;">
+        {% trans "أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة، أو أحد رموز النسخ الاحتياطي." %}
+    </p>
+    {% crispy form %}
+</div>
+{% endblock %}
