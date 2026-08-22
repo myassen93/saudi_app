@@ -70,6 +70,11 @@ CORS_ALLOWED_ORIGINS = [
     if origin.strip()
 ]
 
+# Where `collectstatic` gathers files for the host's web server (or, on
+# PythonAnywhere, its static-files URL mapping in the Web tab) to serve —
+# Django itself doesn't serve static files when DEBUG=False.
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 DATABASES = {
     'default': {
         'ENGINE': os.environ.get('DJANGO_DB_ENGINE', 'django.db.backends.sqlite3'),
