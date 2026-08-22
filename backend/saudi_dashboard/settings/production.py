@@ -12,6 +12,10 @@ Required environment variables:
 Optional environment variables (database, defaults to sqlite):
     DJANGO_DB_ENGINE, DJANGO_DB_NAME, DJANGO_DB_USER, DJANGO_DB_PASSWORD,
     DJANGO_DB_HOST, DJANGO_DB_PORT
+
+Optional environment variables (CORS, defaults to no cross-origin access):
+    DJANGO_CORS_ALLOWED_ORIGINS - comma-separated list of origins allowed to
+        call this API from a browser, e.g. https://saudiapp.netlify.app
 """
 
 import os
@@ -29,6 +33,12 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')
     if host.strip()
+]
+
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get('DJANGO_CORS_ALLOWED_ORIGINS', '').split(',')
+    if origin.strip()
 ]
 
 DATABASES = {

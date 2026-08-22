@@ -3,7 +3,7 @@ import axios from 'axios'
 export const AUTH_TOKEN_STORAGE_KEY = 'saudi-app.auth-token'
 
 export const apiClient = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? '/api',
 })
 
 apiClient.interceptors.request.use((config) => {

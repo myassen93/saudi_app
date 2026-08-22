@@ -171,6 +171,15 @@ and outgoing email (`DJANGO_EMAIL_HOST`, `DJANGO_EMAIL_PORT`,
 `DJANGO_EMAIL_USE_TLS`) — both default to sqlite / localhost if unset.
 Production also enables HTTPS/HSTS/secure-cookie settings.
 
+For a browser-based frontend on another origin (e.g. a Netlify-hosted React
+app) to call this API, set:
+
+```
+DJANGO_CORS_ALLOWED_ORIGINS=https://your-frontend.example.com
+```
+
+Unset/empty means no cross-origin browser access is allowed.
+
 ## Notes
 
 - **django-otp** device enrollment/verification is wired into the dashboard
