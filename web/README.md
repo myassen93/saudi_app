@@ -1,6 +1,6 @@
 # Saudi Dashboard (React frontend)
 
-A React + TypeScript frontend for the [Django backend](../backend): staff manage users (username, password, gender, role), any signed-in user sees registered-user stats (total, and counts by gender) and can protect their own account with TOTP two-step verification. Arabic/English localized, themed in Saudi green/white with IBM Plex Sans (Arabic + Latin), consuming the Django REST API directly (no separate backend-for-frontend).
+A React + TypeScript frontend for the [saudi-app](../saudi-app) Django dashboard: staff manage users (username, password, gender, role), any signed-in user sees registered-user stats (total, and counts by gender) and can protect their own account with TOTP two-step verification. Arabic/English localized, themed in Saudi green/white with IBM Plex Sans (Arabic + Latin), consuming the Django REST API directly (no separate backend-for-frontend).
 
 ## Stack
 
@@ -17,7 +17,7 @@ Redux and Context are deliberately split, not overlapping: Context owns *who is 
 ## Project structure
 
 ```
-web/
+saudi_app_react/
 ├── index.html
 ├── vite.config.ts                     # dev server + /api proxy to the Django backend
 ├── src/
@@ -28,7 +28,7 @@ web/
 │   ├── locales/
 │   │   ├── en/translation.json, en/otp.json
 │   │   └── ar/translation.json, ar/otp.json
-│   ├── assets/logo.svg                # copied from ../backend/static/img/logo.svg
+│   ├── assets/logo.svg                # copied from saudi-app/static/img/logo.svg
 │   ├── api/
 │   │   ├── client.ts                  # axios instance: token header, 401 -> global logout event
 │   │   └── types.ts                   # TS types mirroring the DRF serializers
@@ -76,11 +76,11 @@ Any signed-in user can protect their own login with an authenticator app (Google
 2. **Sign in afterwards** — `AuthContext.login()` still posts `{username, password}` first; if the account has 2FA enabled, the API responds `401 {otp_required: true}` instead of a token. The credentials are held in memory (never persisted) and `LoginForm` swaps in `OtpVerifyForm`, which resubmits the same request with `otp_token` added (`AuthContext.verifyOtp()`). A wrong code keeps the user on that screen; "Use a different account" backs out to the credentials form.
 3. **Disable** — a confirmation modal, then `POST /auth/2fa/disable/`, after which sign-in is single-step again.
 
-No password re-entry is required to disable 2FA (matching the Django dashboard's own session-based 2FA, which this feature is independent of — see `../backend/accounts` for the server-rendered equivalent).
+No password re-entry is required to disable 2FA (matching the Django dashboard's own session-based 2FA, which this feature is independent of — see `saudi-app/accounts` for the server-rendered equivalent).
 
 ## Setup
 
-Requires Node 20+ and a running backend (see `../backend/README.md`).
+Requires Node 20+ and a running `saudi-app` backend (see its own README).
 
 ```bash
 # 1. Install dependencies
@@ -88,7 +88,7 @@ npm install
 
 # 2. In a separate terminal, run the Django backend on :8080
 #    (Django's own default is :8000 — this app's dev proxy expects :8080, see below)
-cd ../backend
+cd ../saudi-app
 poetry run python manage.py runserver 8080
 
 # 3. Run the dev server
@@ -97,11 +97,11 @@ npm run dev
 
 Then visit `http://localhost:5173/`.
 
-Sign in with any user from the Django app (e.g. `poetry run python manage.py seed_data` in `../backend` creates `admin`/`Admin12345` and `user`/`User12345`). Staff users see the users table with add/edit/delete; everyone else sees the dashboard counters and can enable their own two-step verification.
+Sign in with any user from the Django app (e.g. `poetry run python manage.py seed_data` in `saudi-app` creates `admin`/`Admin12345` and `user`/`User12345`). Staff users see the users table with add/edit/delete; everyone else sees the dashboard counters and can enable their own two-step verification.
 
 ## Dev proxy / CORS
 
-The backend doesn't have `django-cors-headers` configured, so in dev, Vite proxies `/api/*` to the Django backend (`vite.config.ts`), keeping every request same-origin from the browser's point of view. The proxy target defaults to `http://localhost:8080` and can be overridden with `VITE_API_PROXY_TARGET`. For a production deployment where the frontend isn't served from the same origin/reverse-proxy as Django, you'll need to either add CORS headers on the backend or serve both behind the same origin.
+`saudi-app` doesn't have `django-cors-headers` configured, so in dev, Vite proxies `/api/*` to the Django backend (`vite.config.ts`), keeping every request same-origin from the browser's point of view. The proxy target defaults to `http://localhost:8080` and can be overridden with `VITE_API_PROXY_TARGET`. For a production deployment where the frontend isn't served from the same origin/reverse-proxy as Django, you'll need to either add CORS headers on the backend or serve both behind the same origin.
 
 ## Scripts
 

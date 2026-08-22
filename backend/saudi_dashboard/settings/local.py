@@ -20,3 +20,15 @@ SECRET_KEY = os.environ.get(
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
+# Dev-friendly defaults so a locally-run React app (CRA on :3000, Vite on
+# :5173) can call the API without extra setup. Override with a comma-separated
+# DJANGO_CORS_ALLOWED_ORIGINS if the frontend runs somewhere else.
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get(
+        'DJANGO_CORS_ALLOWED_ORIGINS',
+        'http://localhost:3000,http://127.0.0.1:3000,http://localhost:5173,http://127.0.0.1:5173',
+    ).split(',')
+    if origin.strip()
+]

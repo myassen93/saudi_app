@@ -11,7 +11,7 @@ export const API_CONFIG = {
   BASE_URL_DEV_ANDROID: 'http://10.0.2.2:8080/api',   // Android emulator → host machine
   BASE_URL_DEV_IOS: 'http://localhost:8080/api',      // iOS simulator → host machine
   BASE_URL_DEV_WEB: 'http://localhost:8080/api',      // Browser → host machine
-  BASE_URL_PROD: 'https://dashboard.example.sa/api',  // TODO: replace with the real production host
+  BASE_URL_PROD: 'https://saudidashboard.pythonanywhere.com/api',
 
   get BASE_URL() {
     const envBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL;

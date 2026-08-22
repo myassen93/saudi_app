@@ -52,7 +52,7 @@ Toolkit slices, `expo-router` file-based navigation, AsyncStorage, and the
 ## Project structure
 
 ```
-mobile/
+saudi_mobile_app/
 ├── app/                         expo-router screens
 │   ├── _layout.tsx              root layout: fonts, i18n/RTL init, Redux+Context providers
 │   ├── index.tsx                redirect gate — /login or /home based on auth state
@@ -115,7 +115,7 @@ mobile/
 ### 1. Run the backend
 
 ```bash
-cd ../backend
+cd /opt/WORK/saudi-app        # WSL
 poetry install                # first time only
 poetry run python manage.py migrate
 poetry run python manage.py seed_data     # creates demo accounts, see below
